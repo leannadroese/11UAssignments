@@ -34,6 +34,7 @@ public class A1Q2 {
        new Wall(kitchener, 1, 2, Direction.EAST);
        new Wall(kitchener, 1, 2, Direction.SOUTH);
        new Wall(kitchener, 2, 1, Direction.SOUTH);
+         //fhgf
        
        //create new Robot
        Robot bob = new Robot(kitchener, 1, 2, Direction.SOUTH);
