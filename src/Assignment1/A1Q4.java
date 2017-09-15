@@ -6,6 +6,7 @@ package Assignment1;
 
 import becker.robots.City;
 import becker.robots.Direction;
+import becker.robots.Robot;
 import becker.robots.Wall;
 
 /**
@@ -26,6 +27,19 @@ public class A1Q4 {
         //create walls
         new Wall(kitchener, 0, 1, Direction.WEST);
         new Wall(kitchener, 1, 1, Direction.WEST);
+        new Wall(kitchener, 1, 1, Direction.SOUTH);
+        
+        //create robots
+        Robot bob = new Robot(kitchener, 0, 0, Direction.SOUTH);
+        Robot will = new Robot(kitchener, 0, 1, Direction.SOUTH);
+        
+        // make robots move
+        bob.move();
+        will.move();
+        will.turnLeft();
+        will.move();
+        
+        bob.move();
         
         
         
