@@ -23,6 +23,6 @@ public class A1Q5 {
         
         //create walls
         new Wall(kw, 3, 1, Direction.NORTH);
-        
+              
     }
 }
