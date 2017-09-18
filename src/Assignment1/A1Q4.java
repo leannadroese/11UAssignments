@@ -24,7 +24,7 @@ public class A1Q4 {
         //create new city
         City kitchener = new City();
         
-        //create walls
+        // create walls
         new Wall(kitchener, 0, 1, Direction.WEST);
         new Wall(kitchener, 1, 1, Direction.WEST);
         new Wall(kitchener, 1, 1, Direction.SOUTH);
@@ -33,14 +33,23 @@ public class A1Q4 {
         Robot bob = new Robot(kitchener, 0, 0, Direction.SOUTH);
         Robot will = new Robot(kitchener, 0, 1, Direction.SOUTH);
         
-        // make robots move
+        //make Robots move
         bob.move();
         will.move();
         will.turnLeft();
         will.move();
-        
         bob.move();
-        
+        will.turnLeft();
+        will.turnLeft();
+        will.turnLeft();
+        will.move();
+        bob.turnLeft();
+        will.turnLeft();
+        will.turnLeft();
+        will.turnLeft();
+        will.move();
+        bob.move();
+
         
         
         
