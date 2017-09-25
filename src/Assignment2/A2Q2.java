@@ -7,6 +7,7 @@ package Assignment2;
 import becker.robots.City;
 import becker.robots.Direction;
 import becker.robots.Robot;
+import becker.robots.Thing;
 import becker.robots.Wall;
 
 /**
@@ -20,10 +21,10 @@ public class A2Q2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+
         //create new City
         City kw = new City();
-        
+
         //create walls 
         new Wall(kw, 3, 0, Direction.SOUTH);
         new Wall(kw, 3, 1, Direction.SOUTH);
@@ -38,13 +39,17 @@ public class A2Q2 {
         new Wall(kw, 3, 1, Direction.EAST);
         new Wall(kw, 3, 3, Direction.EAST);
         new Wall(kw, 3, 6, Direction.EAST);
-        
+
+        //create thing
+        new Thing(kw, 3, 8, Direction.NORTH);
+
         //create robot
-        Robot karel = new Robot(kw,3,0, Direction.EAST);
-        
+        Robot karel = new Robot(kw, 3, 0, Direction.EAST);
+
         //create while loop
-        while(!(karel.frontIsClear())){
-            
+        while (!(karel.frontIsClear())) {
+
+            //make karel go over the wall
             karel.turnLeft();
             karel.move();
             karel.turnLeft();
@@ -56,16 +61,17 @@ public class A2Q2 {
             karel.turnLeft();
             karel.move();
             karel.turnLeft();
-            
-            while(karel.frontIsClear()){
+
+            //make karel move forward if the way is clear
+            while (karel.frontIsClear() && !karel.canPickThing()) {
+
+                //make karel move
                 karel.move();
-            
-            while(karel.frontIsClear()){
-                karel.move();
-           
-                
-                break;
-        
-        
+
+
+            }
+
+
+        }
     }
 }
