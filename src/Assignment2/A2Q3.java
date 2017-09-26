@@ -24,7 +24,7 @@ public class A2Q3 {
         City kw = new City();
         
         //create a robot
-        Robot karel = new Robot(kw, 5, 6, Direction.EAST);
+        Robot karel = new Robot(kw, 5, 5, Direction.EAST);
               
         //make karel move to Street 0 
         
