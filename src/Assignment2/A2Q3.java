@@ -24,28 +24,49 @@ public class A2Q3 {
         City kw = new City();
         
         //create a robot
-        Robot karel = new Robot(kw, 4, 4, Direction.EAST);
+        Robot karel = new Robot(kw, 5, 6, Direction.EAST);
+              
+        //make karel move to Street 0 
         
-        // make karel face north
-       while(karel.getDirection()!= Direction.NORTH)
-           
-           //make karel turn 
-           karel.turnLeft();
-       
-       while(karel.getStreet()!= 0)
-           
-           //make karel move
-           karel.move();
-       
-       while(karel.getDirection()!= Direction.WEST)
-           
-           //make karel turn to face North
-           karel.turnLeft();
-       
-       while(karel.getAvenue()!= 0)
-           
-           //make karel move
-           karel.move();
+        //if karels street is less than 0, and he is not facing East, make him turn until he is facing East
+        while(karel.getStreet()<0 && karel.getDirection()!= Direction.EAST)
+            
+            //make karel face East
+            karel.turnLeft();
+        
+        //if karels street is greater than 0, and he is not facing West, make him turn until he is facing West
+        while(karel.getStreet()>0 && karel.getDirection()!=Direction.WEST)
+            
+            //make karel face West
+            karel.turnLeft();
+        
+        
+        while(karel.getAvenue()!= 0)
+            
+            //make karel move
+            karel.move();
+        
+        //make karel move to Avenue 0
+        
+        //if karels street is less than 0, and he is not facing South, make him turn until he is facing South
+        while(karel.getStreet()<0 && karel.getDirection()!=Direction.SOUTH)
+            
+            //make karel face South
+            karel.turnLeft();
+        
+        //if karels street is greater than 0, and he is not facing North, make him turn until he is facing North
+        while(karel.getStreet()>0 && karel.getDirection()!=Direction.NORTH)
+            
+            //make karel face North
+            karel.turnLeft();
+        
+        while(karel.getStreet()!=0)
+            
+            //make karel move
+            karel.move();
+        
+            
+        
        
           
        
@@ -56,4 +77,5 @@ public class A2Q3 {
         
         
     }
+
 
