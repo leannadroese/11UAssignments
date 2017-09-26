@@ -20,14 +20,14 @@ public class A2Q1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+
         //create new City
         City kw = new City();
-                
-       //create new robot
+
+        //create new robot
         Robot bob = new Robot(kw, 1, 1, Direction.EAST);
-        
-       //create things
+
+        //create things
         new Thing(kw, 1, 2, Direction.EAST);
         new Thing(kw, 1, 3, Direction.EAST);
         new Thing(kw, 1, 4, Direction.EAST);
@@ -38,33 +38,30 @@ public class A2Q1 {
         new Thing(kw, 1, 9, Direction.EAST);
         new Thing(kw, 1, 10, Direction.EAST);
         new Thing(kw, 1, 11, Direction.EAST);
-        
-        
-        
-         //if bob does not have 7 things in his backpack make him move and pick up a thing
-            while(bob.countThingsInBackpack()!=7){
-                //make bob move and pick a thing
-                bob.move();
-                bob.pickThing();
-         {
-    
-    // make if statement 
-    if(bob.countThingsInBackpack()==7)
-     bob.move();
-     
-                
-         //if bob has 7 things in his backpack move three spaces
-             while(bob.canPickThing()){
-                //make bob move and pick a thing
-                bob.move();
-                
+
+
+
+        //if bob does not have 7 things in his backpack make him move and pick up a thing
+        while (bob.countThingsInBackpack() != 7) {
+            //make bob move and pick a thing
+            bob.move();
+            bob.pickThing();
+            {
+
+                // make if statement 
+                if (bob.countThingsInBackpack() == 7) {
+                    bob.move();
+                }
+
+
+                //if bob has 7 things in his backpack move three spaces
+                while (bob.canPickThing()) {
+                    //make bob move and pick a thing
+                    bob.move();
+
                 }
             }
-            
+
+        }
     }
- }   
 }
-
-        
-    
-
