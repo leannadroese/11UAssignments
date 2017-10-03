@@ -40,11 +40,13 @@ public class A3Q1 {
         // create int move counter loop thing
         for(int count = 0; count < 8; count = count + 1){
             
-            //make bob move 2 times and then turn left and then move again
+            //create a loop that will make bob go around the square 2 times
             bob.move();
             bob.move();
             bob.turnLeft();
             bob.move();
+            
+            //The End
         }
       
                 
