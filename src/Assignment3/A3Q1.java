@@ -33,14 +33,14 @@ public class A3Q1 {
         new Wall(kw, 2, 1, Direction.WEST);
         new Wall(kw, 1, 1, Direction.WEST);
 
-        //create a new robot
+        //create a new robot named bob
         Robot bob = new Robot(kw, 0, 2, Direction.WEST);
 
 
-        // create int move counter loop thing
+        // create int loop thing that will make bob go around the square 2 times
         for (int count = 0; count < 8; count = count + 1) {
 
-            //create a loop that will make bob go around the square 2 times
+            //make bob move one quarter around the square
             bob.move();
             bob.move();
             bob.turnLeft();
