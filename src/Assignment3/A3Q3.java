@@ -19,65 +19,62 @@ public class A3Q3 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+
         //create new City
         City kw = new City();
-        
-        //create a robot that is carrying 20 Things
-       Robot bob = new Robot(kw, 1, 1, Direction.EAST,20);
-        
-        //create a loop that will make bob plant his seeds in 4 rows of 5
-       for( int count = 0; count < 2; count = count + 1){
-           
-           //make a path that will make plant 2 rows of five
-          
-           //make bob plant 5 seeds
-           bob.putThing();
-           bob.move();
-           bob.putThing();
-           bob.move();
-           bob.putThing();
-           bob.move();
-           bob.putThing();
-           bob.move();
-           bob.putThing();
-           bob.move();
-           
-           //make bob move down to the next street
-           bob.turnLeft();
-           bob.turnLeft();
-           bob.turnLeft();
-           
-           bob.move();
-           
-           bob.turnLeft();
-           bob.turnLeft();
-           bob.turnLeft();
-           
-           //make bob plant 5 seeds
-           bob.move();
-           bob.putThing();
-           bob.move();
-           bob.putThing();
-           bob.move();
-           bob.putThing();
-           bob.move();
-           bob.putThing();
-           bob.move();
-           bob.putThing();
-           bob.move();
-           
-           //make bob move down to the next street
-           bob.turnLeft();
-           bob.move();
-           bob.turnLeft();
-           
-           bob.move();
-           
-           //The End
-       }
-       }
-        
-        
-    }
 
+        //create a robot that is carrying 20 Things
+        Robot bob = new Robot(kw, 1, 1, Direction.EAST, 20);
+
+        //create a loop that will make bob plant his seeds in 4 rows of 5
+        for (int count = 0; count < 2; count = count + 1) {
+
+            //make a path that will make plant 2 rows of five
+
+            //make bob plant 5 seeds
+            bob.putThing();
+            bob.move();
+            bob.putThing();
+            bob.move();
+            bob.putThing();
+            bob.move();
+            bob.putThing();
+            bob.move();
+            bob.putThing();
+            bob.move();
+
+            //make bob move down to the next street
+            bob.turnLeft();
+            bob.turnLeft();
+            bob.turnLeft();
+
+            bob.move();
+
+            bob.turnLeft();
+            bob.turnLeft();
+            bob.turnLeft();
+
+            //make bob plant 5 seeds
+            bob.move();
+            bob.putThing();
+            bob.move();
+            bob.putThing();
+            bob.move();
+            bob.putThing();
+            bob.move();
+            bob.putThing();
+            bob.move();
+            bob.putThing();
+            bob.move();
+
+            //make bob move down to the next street
+            bob.turnLeft();
+            bob.move();
+            bob.turnLeft();
+
+            bob.move();
+
+            //The End
+        }
+    }
+}
