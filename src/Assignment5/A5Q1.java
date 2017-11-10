@@ -81,11 +81,13 @@ public class A5Q1 {
                 }
             }
         }
+        //if word contains two OO's replace them with uboo
         if (word.contains(oo)) {
             String doubleO = word.replaceAll(oo, "uboo");
             System.out.println(doubleO);
 
         }
+        //if the word contains ou replace it with ubou
         if (word.contains(ou)) {
             String doubleOU = word.replaceAll(ou, "ubou");
             System.out.println(doubleOU);
