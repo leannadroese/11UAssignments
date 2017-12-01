@@ -18,23 +18,33 @@ public class A6Q7 {
     public static void main(String[] args) {
         //Create a scanner
         Scanner input = new Scanner(System.in);
-        
+
         //Create an array
         int[] array = new int[1000];
         
         //Make the first space in the array = 1
         array[0] = 1;
-        
+
         //Put numbers into array
-        for (int i = 0; i < array.length; i++){
-            //make another int that will do the adding with the i
-            for (int j =1; j < array.length - 1; j++){
-             array[j]= array[i] + 1;   
-            }
-            
-            
+        for (int i = 1; i < array.length; i++) {
+            array[i] = 1;
         }
-        System.out.println(array[22]);
+
+        for (int i = 1; i < array.length; i++) {
+
+            array[i] = array[i] + 1;
+
+        }
+        //mark all of the multiples of two
+        for(int i =2; i < array.length; i++){
+            for(int j = array[i] +2; j < array.length; j++){
+            
+                array[j] = 0;  
+            }
+             
+        }
+
+        System.out.println(array[2]);
+        
     }
-    
 }
