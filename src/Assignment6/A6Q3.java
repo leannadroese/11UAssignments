@@ -35,6 +35,7 @@ public class A6Q3 {
             numbas[0] = numbas[0] + numbas[1];
             numbas[1] = numbas[0] - numbas[1];
             numbas[0] = numbas[0] - numbas[1];
+            //Ouput the info
             System.out.println("The integers in ascending order are: " + numbas[0] + ", " + numbas[1]);
         } else {
             //If the first number is smaller than the second number then make the, keep their place
