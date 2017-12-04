@@ -20,31 +20,50 @@ public class A6Q7 {
         Scanner input = new Scanner(System.in);
 
         //Create an array
-        int[] array = new int[1000];
-        
-        //Make the first space in the array = 1
-        array[0] = 1;
+        int[] array = new int[1001];
 
-        //Put numbers into array
-        for (int i = 1; i < array.length; i++) {
-            array[i] = 1;
+        for (int i = 0; i < array.length; i++) {
+            array[i] = i;
         }
 
-        for (int i = 1; i < array.length; i++) {
+        //make all multiples of 2 equal zero ( except for 2 )
+        for (int two = 2; two < array.length; two = two + 2) {
+            while (array[two] != 0) {
+                array[two] = 0;
 
-            array[i] = array[i] + 1;
-
-        }
-        //mark all of the multiples of two
-        for(int i =2; i < array.length; i++){
-            for(int j = array[i] +2; j < array.length; j++){
-            
-                array[j] = 0;  
             }
-             
         }
 
-        System.out.println(array[2]);
+        // Make all the multiples of 3 equal 0 ( except for 3 )
+        for (int three = 3; three < array.length; three = three + 3) {
+            while (array[three] != 0) {
+                array[three] = 0;
+
+            }
+        }
+
+        for (int five = 5; five < array.length; five = five + 5) {
+            while (array[five] != 0) {
+                array[five] = 0;
+            }
+        }
+
+        for (int seven = 7; seven < array.length; seven = seven + 7) {
+            while (array[seven] != 0) {
+                array[seven] = 0;
+            }
+        }
+
+        array[2] = 2;
+        array[3] = 3;
+        array[5] = 5;
+        array[7] = 7;
         
+        for ( int k = 1; k < array.length; k++){
+            if(array[k] != 0){
+                System.out.println(array[k]);
+            }
+        }
+
     }
 }
