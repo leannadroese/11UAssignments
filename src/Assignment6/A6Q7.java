@@ -29,7 +29,7 @@ public class A6Q7 {
         //make all multiples of 2 equal zero ( except for 2 )
         for (int two = 2; two < array.length; two = two + 2) {
            //Make a loop to make them equal zero
-            while (array[two] != 0) {
+            while (array[two] != 0 && array[two] != array[2]) {
                 array[two] = 0;
 
             }
@@ -38,7 +38,7 @@ public class A6Q7 {
         // Make all the multiples of 3 equal 0 ( except for 3 )
         for (int three = 3; three < array.length; three = three + 3) {
           //Make a loop to make them equal zero
-            while (array[three] != 0) {
+            while (array[three] != 0 && array[three] != array[3]) {
                 array[three] = 0;
 
             }
@@ -46,23 +46,18 @@ public class A6Q7 {
 
         for (int five = 5; five < array.length; five = five + 5) {
             //Make a loop to make them equal zero
-            while (array[five] != 0) {
+            while (array[five] != 0 && array[five] != array[5]) {
                 array[five] = 0;
             }
         }
 
         for (int seven = 7; seven < array.length; seven = seven + 7) {
             //Make a loop to make them equal zero
-            while (array[seven] != 0) {
+            while (array[seven] != 0 && array[seven] != array[7]) {
                 array[seven] = 0;
             }
         }
 
-        //Fix a few numbers that were changed by the loops 
-        array[2] = 2;
-        array[3] = 3;
-        array[5] = 5;
-        array[7] = 7;
         
         //Output all of the numbers to the user
         System.out.println("Here are the prime numbers:");
