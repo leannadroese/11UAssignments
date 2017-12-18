@@ -14,8 +14,8 @@ public class A7Q7 {
 
     public void firstNumber(int numba) {
 
-        //If the number is positive
-        if (numba > 0) {
+        //If the number is positive and two digits
+        if (numba > 0 && numba > 9) {
             //Get rid of the last digit
             int remove = numba / 10;
             //Make a loop that will stop removing the last digit once it only has one digit
@@ -24,10 +24,17 @@ public class A7Q7 {
                 remove = remove / 10;
             }
             //Once the only digit left is the first digit of the number - Output it to the user
-            System.out.println(remove);
+            System.out.println("The first digit is: " + remove);
+
+        } else {
+            //If the number they entered is only one digit then just output their number
+            if (numba > 0 && numba < 9 || numba == 9) {
+                //Output their number
+                System.out.println("The first digit is: " + numba);
+            }
         }
-        //If the number is negative
-        if (numba < 0) {
+        //If the number is negative and two digits
+        if (numba < 0 && numba < -9) {
             //Get rid of the last digit
             int remove = numba / 10;
             //Make a loop that will stop removing the last digit once it only has one digit
@@ -35,9 +42,19 @@ public class A7Q7 {
                 //Remove the last digit
                 remove = remove / 10;
             }
+            //Turn it into a positive number
+            int positive = remove * -1;
             //Output the first digit of the number to the screen
-            System.out.println(remove);
+            System.out.println("The first digit is: " + positive);
 
+        } else {
+            //If the number they entered is only one digit then just output their number
+            if (numba < 0 && numba > -9 || numba == -9) {
+                //Make their number a positive integer
+                int change = numba * -1;
+                //Output the info onto the screen 
+                System.out.println("The first digit is: " + change);
+            }
         }
     }
 
