@@ -34,7 +34,8 @@ public class A7Q8 {
                     System.out.println("true");
                 }
             }
-
+   
+            
         }
     }
 
