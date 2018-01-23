@@ -24,7 +24,7 @@ import javax.imageio.ImageIO;
  *
  * @author droel8940
  */
-public class Game extends JComponent {
+public class NarwhalAdventure extends JComponent {
 
     // Height and Width of our game
     static final int WIDTH = 600;
@@ -55,7 +55,7 @@ public class Game extends JComponent {
     int iceDirectionY = 1;
     int iceSpeed = 0;
     double iceSpeedy = 2;
-    double iceZoom = 0.0008;
+    double iceZoom = 0.001;
     int iceSize = 40;
     int iceSpace = 0;
     //Make an array for your blocks
@@ -73,7 +73,7 @@ public class Game extends JComponent {
     // GAME VARIABLES END HERE   
     // Constructor to create the Frame and place the panel in
     // You will learn more about this in Grade 12 :)
-    public Game() {
+    public NarwhalAdventure() {
         // creates a windows to show my game
         JFrame frame = new JFrame(title);
 
@@ -227,6 +227,7 @@ public class Game extends JComponent {
 
                 //Make the ice speed increase
                 iceSpeedy = iceSpeedy + iceZoom;
+                //Turn back into an integer
                 iceSpeed = (int) iceSpeedy;
 
                 //Make the blocks move
@@ -257,6 +258,7 @@ public class Game extends JComponent {
                         playerSpeed = 0;
                         playerSpeedy = 0;
                         playerZoom = 0;
+                        player.y = HEIGHT + 20;
                     }
                 }
                 //Make the score count up
@@ -352,7 +354,7 @@ public class Game extends JComponent {
      */
     public static void main(String[] args) {
         // creates an instance of my game
-        Game game = new Game();
+        NarwhalAdventure game = new NarwhalAdventure();
 
         // starts the game loop
         game.run();
