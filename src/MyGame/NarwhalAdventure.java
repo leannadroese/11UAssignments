@@ -54,7 +54,7 @@ public class NarwhalAdventure extends JComponent {
     //Ice variables
     int iceDirectionY = 1;
     int iceSpeed = 0;
-    double iceSpeedy = 2;
+    double iceSpeedy = 3;
     double iceZoom = 0.001;
     int iceSize = 40;
     int iceSpace = 0;
